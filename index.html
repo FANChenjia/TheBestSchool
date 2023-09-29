@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>祝何怡羲生日快乐！</title>
+    <style>
+        h1.ligurestudio {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    </style>
+    <style>
+        h1.subTitle {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            color: gray;
+        }
+    </style>
+    <style>
+        h1.countdown {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="ligurestudio" style="font-size 80px;;">羲羲生日快乐～</h1>
+    <h1 class="subTitle">您将在倒计时结束之后跳转至主站</h1>
+    <script>
+        var countdown = 4;
+        function startCountdown() {
+            if (countdown == -1) {
+                clearInterval(countdown);
+                window.location.replace("http://www.gtyhe.com/")
+            } else {
+                document.getElementById("countdown").innerHTML = countdown;
+                countdown--;
+            }
+        }
+        setInterval(startCountdown, 1000);
+    </script>
+    <h1 id="countdown" class="countdown">5</h1>
+</body>
+
+</html>
